@@ -6,14 +6,595 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>903</width>
+    <height>602</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="styleSheet">
+   <string notr="true">* {
+	border: none;
+	/* background-color: #6f6a69; /* like a grey  */
+	/* background-color: #66add3; /* like a blue  */
+	background: transparent;
+	color: #e8e6e3;
+	padding: 0;
+	margin: 0;
+}
+
+#leftMenuContent {
+	background:  #3f3f45;
+}
+
+#leftMenuSubContent{
+	background:  #3f3f45;
+}
+
+#mainContent{
+	background:  #3f3f45;
+}
+
+#fileTreeBar {
+	background:  #6f6a69;
+	border-radius: 5;
+}
+
+#mainContentHead {
+	background-color: #6f6a69;
+	border-radius: 5;
+}</string>
+  </property>
+  <widget class="QWidget" name="leftMenuContent">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item alignment="Qt::AlignLeft">
+     <widget class="QWidget" name="leftMenuSubContent" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item alignment="Qt::AlignTop">
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources/resources.qrc">
+              <normaloff>:/FeatherIcons/FeatherIcons/align-justify.svg</normaloff>:/FeatherIcons/FeatherIcons/align-justify.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>Folders</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources/resources.qrc">
+              <normaloff>:/FeatherIcons/FeatherIcons/archive.svg</normaloff>:/FeatherIcons/FeatherIcons/archive.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="text">
+             <string>Record</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources/resources.qrc">
+              <normaloff>:/FeatherIcons/FeatherIcons/clipboard.svg</normaloff>:/FeatherIcons/FeatherIcons/clipboard.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item alignment="Qt::AlignBottom">
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="pushButton_4">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resources/resources.qrc">
+              <normaloff>:/FeatherIcons/FeatherIcons/settings.svg</normaloff>:/FeatherIcons/FeatherIcons/settings.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="leftMenuMainContent" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QFrame" name="frame_4">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QFrame" name="fileTreeBar">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_5">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/FeatherIcons/FeatherIcons/search.svg</normaloff>:/FeatherIcons/FeatherIcons/search.svg</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeWidget" name="treeWidget">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="rootIsDecorated">
+             <bool>true</bool>
+            </property>
+            <property name="uniformRowHeights">
+             <bool>false</bool>
+            </property>
+            <attribute name="headerVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="headerHighlightSections">
+             <bool>false</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>20050101_20050115</string>
+             </property>
+            </column>
+            <item>
+             <property name="text">
+              <string>_split</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+             </property>
+             <item>
+              <property name="text">
+               <string>OPR20050004</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resources/resources.qrc">
+                <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+              </property>
+              <item>
+               <property name="text">
+                <string>101</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+               </property>
+               <item>
+                <property name="text">
+                 <string>20050000001.000</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources/resources.qrc">
+                  <normaloff>:/FeatherIcons/FeatherIcons/file.svg</normaloff>:/FeatherIcons/FeatherIcons/file.svg</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>20050000001.001</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources/resources.qrc">
+                  <normaloff>:/FeatherIcons/FeatherIcons/file.svg</normaloff>:/FeatherIcons/FeatherIcons/file.svg</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>20050000002.000</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources/resources.qrc">
+                  <normaloff>:/FeatherIcons/FeatherIcons/file.svg</normaloff>:/FeatherIcons/FeatherIcons/file.svg</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>20050000002.001</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources/resources.qrc">
+                  <normaloff>:/FeatherIcons/FeatherIcons/file.svg</normaloff>:/FeatherIcons/FeatherIcons/file.svg</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>20050000002.002</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources/resources.qrc">
+                  <normaloff>:/FeatherIcons/FeatherIcons/file.svg</normaloff>:/FeatherIcons/FeatherIcons/file.svg</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>20050000002.003</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources/resources.qrc">
+                  <normaloff>:/FeatherIcons/FeatherIcons/file.svg</normaloff>:/FeatherIcons/FeatherIcons/file.svg</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>20050000002.004</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="resources/resources.qrc">
+                  <normaloff>:/FeatherIcons/FeatherIcons/file.svg</normaloff>:/FeatherIcons/FeatherIcons/file.svg</iconset>
+                </property>
+               </item>
+              </item>
+              <item>
+               <property name="text">
+                <string>102</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>103</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>104</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+               </property>
+              </item>
+             </item>
+             <item>
+              <property name="text">
+               <string>OPR20050005</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resources/resources.qrc">
+                <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>OPR20050006</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resources/resources.qrc">
+                <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>OPR20050007</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resources/resources.qrc">
+                <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>OPR20050008</string>
+              </property>
+              <property name="icon">
+               <iconset resource="resources/resources.qrc">
+                <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+              </property>
+             </item>
+            </item>
+            <item>
+             <property name="text">
+              <string>OPR20050004</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OPR20050005</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OPR20050006</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OPR20050007</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OPR20050008</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/FeatherIcons/FeatherIcons/folder.svg</normaloff>:/FeatherIcons/FeatherIcons/folder.svg</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>info.txt</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources/resources.qrc">
+               <normaloff>:/FeatherIcons/FeatherIcons/file-text.svg</normaloff>:/FeatherIcons/FeatherIcons/file-text.svg</iconset>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mainContent" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>100</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item alignment="Qt::AlignTop">
+        <widget class="QWidget" name="mainContentHead" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QFrame" name="frame_6">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item alignment="Qt::AlignLeft">
+              <widget class="QPushButton" name="pushButton_6">
+               <property name="text">
+                <string>PushButton</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignRight">
+           <widget class="QFrame" name="frame_7">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_11">
+             <item>
+              <widget class="QPushButton" name="pushButton_7">
+               <property name="text">
+                <string>PushButton</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="mainContentInfoBar" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QFrame" name="frame_8">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QPushButton" name="pushButton_8">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/FeatherIcons/FeatherIcons/arrow-left-circle.svg</normaloff>:/FeatherIcons/FeatherIcons/arrow-left-circle.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_5" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <item>
+              <widget class="QPushButton" name="pushButton_10">
+               <property name="text">
+                <string>PushButton</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_9">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <item>
+              <widget class="QPushButton" name="pushButton_9">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources/resources.qrc">
+                 <normaloff>:/FeatherIcons/FeatherIcons/arrow-right-circle.svg</normaloff>:/FeatherIcons/FeatherIcons/arrow-right-circle.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="mainSubContent" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources>
   <include location="resources/resources.qrc"/>
